@@ -8,6 +8,8 @@ class Post(models.Model):
     author = models.ForeignKey("auth.User", 
         on_delete = models.CASCADE),
 
+    class Meta:
+        verbose_name_plural = "Publicaciones"
 
     def __str__(self):
         return self.titulo
